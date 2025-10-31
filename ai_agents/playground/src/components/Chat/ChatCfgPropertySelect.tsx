@@ -89,6 +89,7 @@ export function RemotePropertyCfgSheet() {
         <div className="my-4">
           <Label>Extension</Label>
           <Select
+            name="extension"
             onValueChange={setSelectedExtension}
             value={selectedExtension}
           >
@@ -208,6 +209,7 @@ export function RemotePropertyAddCfgSheet({
         {hasRemainingProperties ? (
           <>
             <Select
+              name="property"
               onValueChange={(key) => {
                 setSelectedProperty(key);
               }}

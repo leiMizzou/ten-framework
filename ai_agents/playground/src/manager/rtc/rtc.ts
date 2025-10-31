@@ -37,6 +37,9 @@ export class RtcManager extends AGEventEmitter<RtcEvents> {
     super();
     this._joined = false;
     this.localTracks = {};
+    // Set Agora SDK log level to WARNING to reduce console noise
+    // 0=DEBUG, 1=INFO, 2=WARNING, 3=ERROR, 4=NONE
+    AgoraRTC.setLogLevel(2);
     this.client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
     this._listenRtcEvents();
   }
