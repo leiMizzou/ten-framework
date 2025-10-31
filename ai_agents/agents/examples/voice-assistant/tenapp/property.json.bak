@@ -59,14 +59,13 @@
               "addon": "fish_tts_local_python",
               "extension_group": "tts",
               "property": {
-                "base_url": "http://host.docker.internal:8090",
+                "base_url": "http://fish-speech-server:8080",
                 "dump": false,
                 "dump_path": "./",
                 "params": {
-                  "text": "",
-                  "spk_id": "中文男",
+                  "format": "pcm",
                   "sample_rate": 16000,
-                  "format": "pcm"
+                  "reference_id": "default"
                 }
               }
             },

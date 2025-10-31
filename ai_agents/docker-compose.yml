@@ -10,7 +10,9 @@ services:
       - "${GRAPH_DESIGNER_SERVER_PORT}:${GRAPH_DESIGNER_SERVER_PORT}"
       - "${SERVER_PORT}:${SERVER_PORT}"
       - "3000:3000"
-      - 9000-9001:9000-9001
+      - "9000-9001:9000-9001"
+      # Agora RTC UDP ports for media
+      - "4000-4010:4000-4010/udp"
     volumes:
       - ./:/app
       - ${LOG_PATH}:${LOG_PATH}

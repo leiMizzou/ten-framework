@@ -45,6 +45,12 @@ export async function middleware(req: NextRequest) {
 
     // console.log(`Rewriting request to ${url.href}`);
     return NextResponse.rewrite(url);
+  } else if (pathname.startsWith(`/api/graphs`)) {
+    // Proxy graphs requests
+    url.href = `${AGENT_SERVER_URL}/graphs`;
+
+    // console.log(`Rewriting request to ${url.href}`);
+    return NextResponse.rewrite(url);
   } else if (pathname.startsWith("/api/dev/")) {
     if (pathname.startsWith("/api/dev/v1/addons/default-properties")) {
       url.href = `${AGENT_SERVER_URL}/dev-tmp/addons/default-properties`;

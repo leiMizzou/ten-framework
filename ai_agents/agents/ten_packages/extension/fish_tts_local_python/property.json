@@ -1,0 +1,10 @@
+{
+    "base_url": "http://host.docker.internal:8000",
+    "dump": false,
+    "dump_path": "./",
+    "params": {
+        "format": "pcm",
+        "sample_rate": 16000,
+        "reference_id": "default"
+    }
+}

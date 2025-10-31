@@ -1,0 +1,7 @@
+{
+    "ws_url": "ws://host.docker.internal:10095",
+    "language": "zh-CN",
+    "model": "paraformer-zh",
+    "mode": "2pass",
+    "hotwords": ""
+}

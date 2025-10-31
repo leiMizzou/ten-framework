@@ -26,14 +26,13 @@
             {
               "type": "extension",
               "name": "stt",
-              "addon": "funasr_asr_python",
+              "addon": "aliyun_asr",
               "extension_group": "stt",
               "property": {
-                "ws_url": "ws://host.docker.internal:10095",
-                "mode": "2pass",
-                "language": "zh",
-                "model": "paraformer-zh",
-                "hotwords": ""
+                "appkey": "local_funasr",
+                "akid": "local",
+                "aksecret": "local",
+                "api_url": "ws://host.docker.internal:10095"
               }
             },
             {
@@ -42,7 +41,7 @@
               "addon": "openai_llm2_python",
               "extension_group": "chatgpt",
               "property": {
-                "base_url": "${env:OPENAI_API_BASE|https://api.openai.com/v1}",
+                "base_url": "https://api.openai.com/v1",
                 "api_key": "${env:OPENAI_API_KEY}",
                 "frequency_penalty": 0.9,
                 "model": "${env:OPENAI_MODEL}",
@@ -56,17 +55,16 @@
             {
               "type": "extension",
               "name": "tts",
-              "addon": "fish_tts_local_python",
+              "addon": "fish_audio_tts_python",
               "extension_group": "tts",
               "property": {
-                "base_url": "http://host.docker.internal:8090",
                 "dump": false,
                 "dump_path": "./",
                 "params": {
-                  "text": "",
-                  "spk_id": "中文男",
+                  "api_key": "local_service",
+                  "reference_id": "default",
                   "sample_rate": 16000,
-                  "format": "pcm"
+                  "backend": "speech-1.5"
                 }
               }
             },
