@@ -58,16 +58,17 @@
             {
               "type": "extension",
               "name": "tts",
-              "addon": "aliyun_tts_realtime_python",
+              "addon": "fish_tts_local_python",
               "extension_group": "tts",
               "property": {
-                "api_key": "${env:ALIYUN_TTS_API_KEY}",
-                "model": "qwen3-tts-flash-realtime",
-                "ws_url": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime",
-                "voice": "Cherry",
-                "format": "pcm",
-                "sample_rate": 24000,
-                "mode": "server_commit"
+                "base_url": "http://host.docker.internal:8090",
+                "dump": false,
+                "params": {
+                  "text": "",
+                  "spk_id": "中文男",
+                  "sample_rate": 16000,
+                  "format": "pcm"
+                }
               }
             },
             {

@@ -1,0 +1,9 @@
+{
+  "api_key": "${env:ALIYUN_TTS_API_KEY}",
+  "model": "qwen3-tts-flash-realtime",
+  "ws_url": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime",
+  "voice": "Cherry",
+  "format": "pcm",
+  "sample_rate": 24000,
+  "mode": "server_commit"
+}

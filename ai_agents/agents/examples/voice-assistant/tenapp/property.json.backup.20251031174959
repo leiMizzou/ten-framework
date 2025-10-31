@@ -62,11 +62,11 @@
               "extension_group": "tts",
               "property": {
                 "api_key": "${env:ALIYUN_TTS_API_KEY}",
-                "model": "qwen3-tts-flash-realtime",
+                "model": "qwen-tts-realtime-latest",
                 "ws_url": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime",
-                "voice": "Cherry",
+                "voice": "longxiaochun",
                 "format": "pcm",
-                "sample_rate": 24000,
+                "sample_rate": 16000,
                 "mode": "server_commit"
               }
             },
