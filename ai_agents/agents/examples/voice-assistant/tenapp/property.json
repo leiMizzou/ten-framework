@@ -51,7 +51,7 @@
                 "max_tokens": 512,
                 "prompt": "",
                 "proxy_url": "${env:OPENAI_PROXY_URL|}",
-                "greeting": "TEN Agent connected. How can I help you today?",
+                "greeting": "你好，有什么可以帮忙的?",
                 "max_memory_length": 10
               }
             },
@@ -62,7 +62,7 @@
               "extension_group": "tts",
               "property": {
                 "api_key": "${env:ALIYUN_TTS_API_KEY}",
-                "model": "qwen3-tts-flash-realtime",
+                "model": "qwen-tts-realtime",
                 "ws_url": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime",
                 "voice": "Cherry",
                 "format": "pcm",
